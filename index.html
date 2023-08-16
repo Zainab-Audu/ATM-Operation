@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Index.css" />
+    <script
+      src="https://kit.fontawesome.com/234de0dee3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ATM Operation</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Amazon Bank</h1>
+      <p>Where all dreams come through</p>
+    </header>
+
+    <div class="container">
+      <div class="atm">
+        <button onclick="checkBalance()">Check Balance</button>
+        <button onclick="deposit()">Deposit</button>
+        <button onclick="withdraw()">Withdraw</button>
+
+        <p id="balance">Your balance: ₦700,000,000,000,000</p>
+      </div>
+    </div>
+    <script>
+      let balance = 700000000000000; // Initial balance
+
+      function checkBalance() {
+        alert("Your balance is:  ₦" + balance);
+      }
+
+      function deposit() {
+        let amount = parseFloat(prompt("Enter amount to deposit:"));
+        if (!isNaN(amount) && amount > 0) {
+          balance += amount;
+          updateBalance();
+          alert("Deposit successful!");
+        } else {
+          alert("Invalid amount. Deposit failed.");
+        }
+      }
+
+      function withdraw() {
+        let amount = parseFloat(prompt("Enter amount to withdraw:"));
+        if (!isNaN(amount) && amount > 0 && amount <= balance) {
+          balance -= amount;
+          updateBalance();
+          alert("Withdrawal successful!");
+        } else {
+          alert("Go and enjoy your money!!.");
+        }
+      }
+
+      function updateBalance() {
+        document.getElementById("balance").textContent =
+          "Your balance:  ₦" + balance;
+      }
+    </script>
+  </body>
+</html>

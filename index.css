@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at center, #00ff00, rgb(30, 26, 26));
+}
+
+header {
+  background: radial-gradient(ellipse at center, #0b170b, #00cc00);
+
+  color: white;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.atm {
+  background: linear-gradient(to right, #f9fafb, #222831);
+  border: 2px solid #0a0a0a;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
